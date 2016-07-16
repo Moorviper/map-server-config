@@ -9,11 +9,11 @@ apt install nodejs npm ruby-sass prometheus grafana nginx
 
 ### HOPGLASS-SERVER 
 
-wget https://raw.githubusercontent.com/plumpudding/hopglass-server/v0.1.1/scripts/bootstrap.sh; bash bootstrap.sh; rm bootstrap.sh
+# wget https://raw.githubusercontent.com/plumpudding/hopglass-server/v0.1.1/scripts/bootstrap.sh; bash bootstrap.sh; rm bootstrap.sh
 # this step assumes that you have a bat0 interface. Otherwise change the config.json accordingly (e.g. to "br0")
-cp hopglass-server/*.json /etc/hopglass-server/default/
-systemctl start hopglass-server@default
-systemctl enable hopglass-server@default
+# cp hopglass-server/*.json /etc/hopglass-server/default/
+# systemctl start hopglass-server@default
+# systemctl enable hopglass-server@default
 
 ### HOPGLASS
 
@@ -39,8 +39,8 @@ systemctl start prometheus
 
 # you need an ip6 "::1" localhost entry in /etc/hosts as /hopglass is not listening on v4
 cp nginx/default /etc/nginx/sites-available/
-cp nginx/hopglass.ffm.freifunk.net.conf /etc/nginx/sites-available/
-ln -s /etc/nginx/sites-available/hopglass.ffm.freifunk.net.conf /etc/nginx/sites-enabled/hopglass.ffm.freifunk.net.conf
+cp nginx/hopglass.fulda.freifunk.net.conf /etc/nginx/sites-available/
+ln -s /etc/nginx/sites-available/hopglass.fulda.freifunk.net.conf /etc/nginx/sites-enabled/hopglass.fulda.freifunk.net.conf
 systemctl reload nginx
 
 # now add http://localhost:9090/ as default prometheus datasource in the grafana webinterface under http://<host>/grafana

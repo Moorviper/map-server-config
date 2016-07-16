@@ -65,7 +65,7 @@
               "targetBlank": true,
               "title": "RRD-Statistiken",
               "type": "absolute",
-              "url": "https://sstats.ffm.freifunk.net/host.php?h=uber.ffm.freifunk.net&p=exec"
+              "url": "https://sstats.fulda.freifunk.net/host.php?h=uber.fulda.freifunk.net&p=exec"
             },
             {
               "targetBlank": true,
@@ -627,7 +627,7 @@
       "title": "ffm-RRD-stats",
       "tooltip": "",
       "type": "link",
-      "url": "https://sstats.ffm.freifunk.net/host.php?h=uber.ffm.freifunk.net&p=exec"
+      "url": "https://sstats.fulda.freifunk.net/host.php?h=uber.fulda.freifunk.net&p=exec"
     }
   ]
 }
